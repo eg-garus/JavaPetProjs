@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор — ввод данных</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1 class="page-title">Калькулятор арифметических операций</h1>
+
+        <p class="description">
+            Введите два числа, выберите одну из четырёх арифметических операций
+            и нажмите кнопку «Выполнить операцию». Результат будет показан на
+            следующей странице.
+        </p>
+
+        <form id="calcForm" action="result.html" method="get">
+
+            <div class="field">
+                <label for="a">Первое число (A):</label>
+                <input type="text" id="a" name="a" placeholder="Например, 12,5" autocomplete="off">
+            </div>
+
+            <div class="field">
+                <label for="b">Второе число (B):</label>
+                <input type="text" id="b" name="b" placeholder="Например, 4" autocomplete="off">
+            </div>
+
+            <fieldset class="operations">
+                <legend>Арифметическая операция:</legend>
+
+                <label class="radio">
+                    <input type="radio" name="op" value="add" checked>
+                    <span>Сложение (A + B)</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="op" value="sub">
+                    <span>Вычитание (A - B)</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="op" value="mul">
+                    <span>Умножение (A × B)</span>
+                </label>
+
+                <label class="radio">
+                    <input type="radio" name="op" value="div">
+                    <span>Деление (A / B)</span>
+                </label>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Выполнить операцию</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
